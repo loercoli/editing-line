@@ -59,6 +59,31 @@
 				)
 			),
 			
+			// cover-media
+			array(
+				'core/group',
+				array(
+					'className' => 'media_group',
+				),
+				array(
+					array(
+						'core/gallery',
+						array(
+							'className' => 'pre_printing_gallery',
+							'linkTo' => 'none'
+						)
+					),
+					array(
+						'core/embed',
+						array(
+							'className' => 'pre_printing_video',
+							'providerNameSlug' => 'youtube',
+							'responsive' => true
+						)
+					),
+				)
+			),
+			
 			// columns group
 			array(
 				'core/group',
@@ -97,34 +122,42 @@
 								)
 							)
 						)
+					),
+					// new columns block
+					array(
+						'core/columns',
+						array(),
+						array(
+							array(
+								'core/column',
+								array(
+									'width' => '66.66%',
+								),
+								array(
+									array(
+										'core/paragraph',
+										array()
+									)
+								)
+							),
+							array(
+								'core/column',
+								array(
+									'width' => '33.33%',
+								),
+								array(
+									array(
+										'core/image',
+										array(
+											'alt' => '',
+										)
+									)
+								)
+							)
+						)
 					)
 				)
-									),
-			
-			// cover-media
-			array(
-				'core/group',
-				array(
-					'className' => 'media_group',
-				),
-				array(
-					array(
-						'core/gallery',
-						array(
-							'className' => 'pre_printing_gallery',
-							'linkTo' => 'none'
-						)
-					),
-					array(
-						'core/embed',
-						array(
-							'className' => 'pre_printing_video',
-							'providerNameSlug' => 'youtube',
-							'responsive' => true
-						)
-					),
-				)
-			),
+			)
 		);
 	});
 	
