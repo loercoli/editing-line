@@ -1,0 +1,23 @@
+.wp-block-group__inner-container {
+    background-color: #ffffff;
+    padding: 20px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.362);
+}
+
+.wp-block-group__inner-container .wp-block-group__inner-container {
+    background-color: #abd8ff;
+}
+
+.wp-block .wp-block-paragraph,
+.wp-block .wp-block-list,
+.wp-block .wp-block-image,
+.wp-block .wp-block-quote,
+.wp-block .wp-block-table,
+.wp-block .wp-block-code,
+.wp-block .wp-block-details {
+    border: 1px solid rgba(0, 0, 0, 0.362);
+    padding: 5px !important;
+    padding: 0;
+    margin: 20px 0px;
+}

@@ -1,0 +1,30 @@
+.modal {
+    display: none; // Nasconde la modale di default
+    position: fixed; // Posiziona la modale in modo fisso sopra tutto il resto
+    z-index: 1000; // Assicura che sia sopra altri elementi
+    left: 0;
+    top: 0;
+    width: 100%; // Copre l'intera larghezza della viewport
+    height: 100%; // Copre l'intera altezza della viewport
+    overflow: auto; // Permette lo scrolling se il contenuto è più grande della viewport
+    background-color: rgba(0, 0, 0, 0.9); // Sfondo scuro semitrasparente
+
+    .modal-content {
+        margin: auto; // Centra il contenuto della modale
+        display: block;
+        width: 100%; // Larghezza dell'immagine all'interno della modale
+        max-width: 1000px; // Massima larghezza dell'immagine
+    }
+
+    .close {
+        position: absolute;
+        top: 8rem;
+        right: 10rem;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
+}

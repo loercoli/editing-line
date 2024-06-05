@@ -1,0 +1,844 @@
+:root {
+    --surface-secondary-standard: rgba(23, 63, 90, 1);
+    --surface-secondary-container: rgba(125, 206, 250, 1);
+    --surface-secondary-pressed: rgba(8, 32, 45, 1);
+    --surface-primary-standard: rgba(42, 103, 144, 1);
+    --surface-primary-container: rgba(143, 213, 251, 1);
+    --surface-primary-pressed: rgba(16, 49, 69, 1);
+    --surface-background-grayscale-standard: rgba(255, 255, 255, 1);
+    --surface-background-grayscale-low: rgba(242, 242, 242, 1);
+    --surface-background-grayscale-high: rgba(189, 189, 189, 1);
+    --surface-contrast-container-grayscale-low: rgba(242, 242, 242, 1);
+    --surface-contrast-container-grayscale-standard: rgba(214, 214, 214, 1);
+    --surface-contrast-container-grayscale-high: rgba(163, 163, 163, 1);
+    --surface-contrast-container-grayscale-lowest: rgba(255, 255, 255, 1);
+    --surface-contrast-container-grayscale-highest: rgba(135, 135, 135, 1);
+    --surface-alert-standard: rgba(175, 62, 49, 1);
+    --surface-alert-container: rgba(234, 185, 179, 1);
+    --surface-alert-pressed: rgba(88, 31, 25, 1);
+    --surface-opacity-standard-dim: rgba(17, 17, 17, 0.2);
+    --surface-opacity-low-dim: rgba(17, 17, 17, 0.5);
+    --surface-opacity-high-dim: rgba(17, 17, 17, 0.07);
+    --surface-opacity-high-bright: rgba(255, 255, 255, 0.1);
+    --surface-opacity-standard-bright: rgba(255, 255, 255, 0.2);
+    --surface-opacity-low-light: rgba(255, 255, 255, 0.7);
+    --border-stroke-color-secondary: rgba(23, 63, 90, 1);
+    --border-stroke-color-standard: rgba(17, 17, 17, 1);
+    --border-stroke-color-inverse: rgba(255, 255, 255, 1);
+    --border-stroke-color-opacity-low: rgba(255, 255, 255, 0.1);
+    --border-stroke-color-opacity-hight: rgba(17, 17, 17, 0.1);
+    --border-stroke-color-primary: rgba(42, 103, 144, 1);
+    --border-stroke-color-alert: rgba(175, 62, 49, 1);
+    --text-on-secondary-basic-variant: rgba(23, 63, 90, 1);
+    --text-on-secondary-standard: rgba(219, 242, 253, 1);
+    --text-on-secondary-container: rgba(1, 7, 10, 1);
+    --text-on-primary-standard: rgba(228, 245, 254, 1);
+    --text-on-primary-container: rgba(5, 25, 35, 1);
+    --text-on-primary-basic-variant: rgba(42, 103, 144, 1);
+    --text-on-grayscale-standard: rgba(17, 17, 17, 1);
+    --text-on-grayscale-opacity-lower: rgba(255, 255, 255, 0.6);
+    --text-on-grayscale-opacity-higher: rgba(17, 17, 17, 0.6);
+    --text-on-grayscale-opacity-high: rgba(17, 17, 17, 0.35);
+    --text-on-grayscale-opacity-low: rgba(255, 255, 255, 0.4);
+    --text-on-alert-standard: rgba(249, 237, 235, 1);
+    --text-on-alert-container: rgba(20, 7, 6, 1);
+    --text-on-alert-basic-variant: rgba(175, 62, 49, 1);
+    --surface-tertiary-standard: rgba(102, 56, 113, 1);
+    --surface-tertiary-container: rgba(206, 172, 215, 1);
+    --surface-tertiary-pressed: rgba(49, 27, 55, 1);
+    --text-on-tertiary-standard: rgba(242, 234, 245, 1);
+    --text-on-tertiary-container: rgba(12, 6, 13, 1);
+    --text-on-tertiary-basic-variant: rgba(102, 56, 113, 1);
+    --text-on-grayscale-inverse: rgba(255, 255, 255, 1);
+    --border-stroke-color-tertiary: rgba(102, 56, 113, 1);
+    --surface-quaternary-standard: rgba(153, 143, 0, 1);
+    --surface-quaternary-container: rgba(255, 243, 51, 1);
+    --surface-quaternary-pressed: rgba(77, 71, 0, 1);
+    --text-on-quaternary-standard: rgba(255, 252, 204, 1);
+    --text-on-quaternary-container: rgba(20, 19, 0, 1);
+    --text-on-quaternary-basic-variant: rgba(153, 143, 0, 1);
+    --border-stroke-color-quartary: rgba(153, 143, 0, 1);
+    --surface-background-grayscale-inverse: rgba(17, 17, 17, 1);
+    --border-stroke-color-opacity-lowest: rgba(255, 255, 255, 0.4);
+    --border-stroke-color-opacity-hightest: rgba(17, 17, 17, 0.35);
+    --surface-background-primary-standard: rgba(228, 245, 254, 1);
+    --surface-background-primary-low: rgba(198, 234, 253, 1);
+    --surface-background-primary-high: rgba(143, 213, 251, 1);
+    --surface-background-primary-inverse: rgba(5, 25, 35, 1);
+    --surface-contrast-container-primary-lowest: rgba(255, 255, 255, 1);
+    --surface-contrast-container-primary-low: rgba(228, 245, 254, 1);
+    --surface-contrast-container-primary-standard: rgba(198, 234, 253, 1);
+    --surface-contrast-container-primary-high: rgba(143, 213, 251, 1);
+    --surface-contrast-container-primary-highest: rgba(53, 128, 179, 1);
+    --surface-primary-container-low: rgba(228, 245, 254, 1);
+    --surface-secondary-container-low: rgba(219, 242, 253, 1);
+    --surface-tertiary-container-low: rgba(242, 234, 245, 1);
+    --surface-quaternary-container-low: rgba(255, 252, 204, 1);
+    --surface-alert-container-low: rgba(249, 237, 235, 1);
+    --surface-contrast-container-grayscale-inverse: rgba(31, 31, 31, 1);
+    --surface-contrast-container-primary-inverse: rgba(12, 46, 67, 1);
+    --surface-background-tertiary-standard: rgba(242, 234, 245, 1);
+    --surface-background-tertiary-low: rgba(230, 214, 234, 1);
+    --surface-background-tertiary-high: rgba(206, 172, 215, 1);
+    --surface-background-tertiary-inverse: rgba(12, 6, 13, 1);
+    --surface-background-secondary-standard: rgba(219, 242, 253, 1);
+    --surface-background-secondary-low: rgba(189, 231, 252, 1);
+    --surface-background-secondary-high: rgba(125, 206, 250, 1);
+    --surface-background-secondary-inverse: rgba(1, 7, 10, 1);
+    --surface-background-quaternary-standard: rgba(255, 252, 204, 1);
+    --surface-background-quaternary-low: rgba(255, 248, 153, 1);
+    --surface-background-quaternary-high: rgba(255, 243, 51, 1);
+    --surface-background-quaternary-inverse: rgba(20, 19, 0, 1);
+}
+
+.dark {
+    --surface-secondary-standard: rgba(83, 184, 249, 1);
+    --surface-secondary-container: rgba(16, 49, 69, 1);
+    --surface-secondary-pressed: rgba(31, 81, 114, 1);
+    --surface-primary-standard: rgba(102, 195, 249, 1);
+    --surface-primary-container: rgba(30, 78, 109, 1);
+    --surface-primary-pressed: rgba(53, 128, 179, 1);
+    --surface-background-grayscale-standard: rgba(17, 17, 17, 1);
+    --surface-background-grayscale-low: rgba(31, 31, 31, 1);
+    --surface-background-grayscale-high: rgba(84, 84, 84, 1);
+    --surface-contrast-container-grayscale-low: rgba(31, 31, 31, 1);
+    --surface-contrast-container-grayscale-standard: rgba(56, 56, 56, 1);
+    --surface-contrast-container-grayscale-high: rgba(110, 110, 110, 1);
+    --surface-contrast-container-grayscale-lowest: rgba(17, 17, 17, 1);
+    --surface-contrast-container-grayscale-highest: rgba(135, 135, 135, 1);
+    --surface-alert-standard: rgba(224, 151, 143, 1);
+    --surface-alert-container: rgba(132, 46, 37, 1);
+    --surface-alert-pressed: rgba(203, 81, 68, 1);
+    --surface-opacity-standard-dim: rgba(255, 255, 255, 0.2);
+    --surface-opacity-low-dim: rgba(255, 255, 255, 0.7);
+    --surface-opacity-high-dim: rgba(255, 255, 255, 0.1);
+    --surface-opacity-high-bright: rgba(17, 17, 17, 0.1);
+    --surface-opacity-standard-bright: rgba(17, 17, 17, 0.2);
+    --surface-opacity-low-light: rgba(17, 17, 17, 0.7);
+    --border-stroke-color-secondary: rgba(23, 63, 90, 1);
+    --border-stroke-color-standard: rgba(17, 17, 17, 1);
+    --border-stroke-color-inverse: rgba(255, 255, 255, 1);
+    --border-stroke-color-opacity-low: rgba(17, 17, 17, 0.2);
+    --border-stroke-color-opacity-hight: rgba(255, 255, 255, 0.2);
+    --border-stroke-color-primary: rgba(42, 103, 144, 1);
+    --border-stroke-color-alert: rgba(175, 62, 49, 1);
+    --text-on-secondary-basic-variant: rgba(23, 63, 90, 1);
+    --text-on-secondary-standard: rgba(1, 7, 10, 1);
+    --text-on-secondary-container: rgba(219, 242, 253, 1);
+    --text-on-primary-standard: rgba(5, 25, 35, 1);
+    --text-on-primary-container: rgba(219, 242, 253, 1);
+    --text-on-primary-basic-variant: rgba(42, 103, 144, 1);
+    --text-on-grayscale-standard: rgba(255, 255, 255, 1);
+    --text-on-grayscale-opacity-lower: rgba(17, 17, 17, 0.6);
+    --text-on-grayscale-opacity-higher: rgba(255, 255, 255, 0.6);
+    --text-on-grayscale-opacity-high: rgba(255, 255, 255, 0.4);
+    --text-on-grayscale-opacity-low: rgba(17, 17, 17, 0.35);
+    --text-on-alert-standard: rgba(20, 7, 6, 1);
+    --text-on-alert-container: rgba(249, 237, 235, 1);
+    --text-on-alert-basic-variant: rgba(175, 62, 49, 1);
+    --surface-tertiary-standard: rgba(184, 135, 196, 1);
+    --surface-tertiary-container: rgba(78, 43, 85, 1);
+    --surface-tertiary-pressed: rgba(128, 70, 141, 1);
+    --text-on-tertiary-standard: rgba(12, 6, 13, 1);
+    --text-on-tertiary-container: rgba(242, 234, 245, 1);
+    --text-on-tertiary-basic-variant: rgba(102, 56, 113, 1);
+    --text-on-grayscale-inverse: rgba(17, 17, 17, 1);
+    --border-stroke-color-tertiary: rgba(102, 56, 113, 1);
+    --surface-quaternary-standard: rgba(255, 239, 15, 1);
+    --surface-quaternary-container: rgba(117, 109, 0, 1);
+    --surface-quaternary-pressed: rgba(194, 181, 0, 1);
+    --text-on-quaternary-standard: rgba(20, 19, 0, 1);
+    --text-on-quaternary-container: rgba(255, 252, 204, 1);
+    --text-on-quaternary-basic-variant: rgba(153, 143, 0, 1);
+    --border-stroke-color-quartary: rgba(153, 143, 0, 1);
+    --surface-background-grayscale-inverse: rgba(255, 255, 255, 1);
+    --border-stroke-color-opacity-lowest: rgba(17, 17, 17, 0.6);
+    --border-stroke-color-opacity-hightest: rgba(255, 255, 255, 0.6);
+    --surface-background-primary-standard: rgba(5, 25, 35, 1);
+    --surface-background-primary-low: rgba(12, 46, 67, 1);
+    --surface-background-primary-high: rgba(16, 49, 69, 1);
+    --surface-background-primary-inverse: rgba(198, 234, 253, 1);
+    --surface-contrast-container-primary-lowest: rgba(17, 17, 17, 1);
+    --surface-contrast-container-primary-low: rgba(5, 25, 35, 1);
+    --surface-contrast-container-primary-standard: rgba(12, 46, 67, 1);
+    --surface-contrast-container-primary-high: rgba(16, 49, 69, 1);
+    --surface-contrast-container-primary-highest: rgba(30, 78, 109, 1);
+    --surface-primary-container-low: rgba(12, 46, 67, 1);
+    --surface-secondary-container-low: rgba(3, 18, 24, 1);
+    --surface-tertiary-container-low: rgba(25, 13, 27, 1);
+    --surface-quaternary-container-low: rgba(41, 38, 0, 1);
+    --surface-alert-container-low: rgba(44, 15, 12, 1);
+    --surface-contrast-container-grayscale-inverse: rgba(242, 242, 242, 1);
+    --surface-contrast-container-primary-inverse: rgba(198, 234, 253, 1);
+    --surface-background-tertiary-standard: rgba(12, 6, 13, 1);
+    --surface-background-tertiary-low: rgba(25, 13, 27, 1);
+    --surface-background-tertiary-high: rgba(49, 27, 55, 1);
+    --surface-background-tertiary-inverse: rgba(230, 214, 234, 1);
+    --surface-background-secondary-standard: rgba(1, 7, 10, 1);
+    --surface-background-secondary-low: rgba(3, 18, 24, 1);
+    --surface-background-secondary-high: rgba(8, 32, 45, 1);
+    --surface-background-secondary-inverse: rgba(189, 231, 252, 1);
+    --surface-background-quaternary-standard: rgba(20, 19, 0, 1);
+    --surface-background-quaternary-low: rgba(41, 38, 0, 1);
+    --surface-background-quaternary-high: rgba(77, 71, 0, 1);
+    --surface-background-quaternary-inverse: rgba(255, 248, 153, 1);
+}
+
+@media (max-width: 767px) {
+    :root {
+        --border-stroke-l: 0.2857142857142857rem;
+        --screen-width: 26.79rem;
+        --padding-xs: 0.29rem;
+        --padding-s: 0.57rem;
+        --padding-m: 0.86rem;
+        --padding-l: 1.14rem;
+        --padding-xl: 1.71rem;
+        --padding-none: 0.00rem;
+        --padding-body: 7.142857142857143rem;
+        --padding-xxl: 2.86rem;
+        --margin-none: 0.00rem;
+        --margin-xs: 0.57rem;
+        --margin-s: 0.86rem;
+        --margin-m: 1.14rem;
+        --margin-l: 1.43rem;
+        --margin-xl: 2.86rem;
+        --margin-xxl: 5.71rem;
+        --gap-none: 0.00rem;
+        --gap-xs: 0.29rem;
+        --gap-s: 0.57rem;
+        --gap-m: 0.86rem;
+        --gap-l: 1.14rem;
+        --gap-xl: 1.71rem;
+        --border-radius-xs: 0.57rem;
+        --border-radius-s: 1.14rem;
+        --border-radius-xl: 3.43rem;
+        --border-radius-l: 2.29rem;
+        --border-radius-m: 1.71rem;
+        --border-radius-none: 0.00rem;
+        --icon-size-s: 1.71rem;
+        --icon-size-m: 2.00rem;
+        --icon-size-l: 2.29rem;
+        --icon-size-xl: 2.86rem;
+        --icon-size-xs: 1.43rem;
+        --icon-size-xxs: 1.14rem;
+        --screen-heigth: 58.00rem;
+        --main-column-padding: 0.86rem;
+        --main-column-max-width: 26.785714285714285rem;
+        --border-stroke-s: 0.07142857142857142rem;
+        --border-stroke-none: 0.00rem;
+        --border-radius-xxs: 0.29rem;
+        --border-stroke-m: 0.14285714285714285rem;
+    }
+
+    .display-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 3rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .display-display {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.0714285714285716rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.0714285714285716rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 0.7142857142857143rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .button-big {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .button-medium {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+
+    .button-small {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --border-stroke-l: 0.2857142857142857rem;
+        --screen-width: 73.14rem;
+        --padding-xs: 0.29rem;
+        --padding-s: 0.57rem;
+        --padding-m: 0.86rem;
+        --padding-l: 1.71rem;
+        --padding-xl: 2.86rem;
+        --padding-none: 0.00rem;
+        --padding-body: 11.428571428571429rem;
+        --padding-xxl: 4.57rem;
+        --margin-none: 0.00rem;
+        --margin-xs: 0.57rem;
+        --margin-s: 0.86rem;
+        --margin-m: 1.14rem;
+        --margin-l: 1.43rem;
+        --margin-xl: 2.86rem;
+        --margin-xxl: 5.71rem;
+        --gap-none: 0.00rem;
+        --gap-xs: 0.29rem;
+        --gap-s: 0.57rem;
+        --gap-m: 1.14rem;
+        --gap-l: 1.71rem;
+        --gap-xl: 3.43rem;
+        --border-radius-xs: 0.57rem;
+        --border-radius-s: 1.14rem;
+        --border-radius-xl: 3.43rem;
+        --border-radius-l: 2.86rem;
+        --border-radius-m: 2.29rem;
+        --border-radius-none: 0.00rem;
+        --icon-size-s: 1.71rem;
+        --icon-size-m: 2.00rem;
+        --icon-size-l: 2.29rem;
+        --icon-size-xl: 2.86rem;
+        --icon-size-xs: 1.43rem;
+        --icon-size-xxs: 1.43rem;
+        --screen-heigth: 97.57rem;
+        --main-column-padding: 0.86rem;
+        --main-column-max-width: 73.14285714285714rem;
+        --border-stroke-s: 0.07142857142857142rem;
+        --border-stroke-none: 0.00rem;
+        --border-radius-xxs: 0.29rem;
+        --border-stroke-m: 0.14285714285714285rem;
+    }
+
+    .display {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 4.285714285714286rem;
+        line-height: 1;
+        letter-spacing: 0rem;
+    }
+
+    .button-small {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+
+    .button-big {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .button-medium {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.857142857142857rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.857142857142857rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-big {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .label-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --border-stroke-l: 0.21428571428571427rem;
+        --screen-width: 123.43rem;
+        --padding-xs: 0.29rem;
+        --padding-s: 0.57rem;
+        --padding-m: 0.86rem;
+        --padding-l: 1.71rem;
+        --padding-xl: 4.57rem;
+        --padding-none: 0.00rem;
+        --padding-body: 11.428571428571429rem;
+        --padding-xxl: 4.57rem;
+        --margin-none: 0.00rem;
+        --margin-xs: 0.57rem;
+        --margin-s: 0.86rem;
+        --margin-m: 1.14rem;
+        --margin-l: 1.43rem;
+        --margin-xl: 2.86rem;
+        --margin-xxl: 5.71rem;
+        --gap-none: 0.00rem;
+        --gap-xs: 0.29rem;
+        --gap-s: 0.57rem;
+        --gap-m: 1.14rem;
+        --gap-l: 1.71rem;
+        --gap-xl: 3.43rem;
+        --border-radius-xs: 0.57rem;
+        --border-radius-s: 1.14rem;
+        --border-radius-xl: 3.43rem;
+        --border-radius-l: 2.86rem;
+        --border-radius-m: 2.29rem;
+        --border-radius-none: 0.00rem;
+        --icon-size-s: 1.71rem;
+        --icon-size-m: 2.00rem;
+        --icon-size-l: 2.29rem;
+        --icon-size-xl: 2.86rem;
+        --icon-size-xs: 1.43rem;
+        --icon-size-xxs: 1.43rem;
+        --screen-heigth: 77.14rem;
+        --main-column-padding: 0.86rem;
+        --main-column-max-width: 77.14285714285714rem;
+        --border-stroke-s: 0.07142857142857142rem;
+        --border-stroke-none: 0.00rem;
+        --border-radius-xxs: 0.29rem;
+        --border-stroke-m: 0.14285714285714285rem;
+    }
+
+    .display {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 4.285714285714286rem;
+        line-height: 1;
+        letter-spacing: 0rem;
+    }
+
+    .button-small {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+
+    .button-big {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .button-medium {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.857142857142857rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.857142857142857rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .heading-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 2.5rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.7142857142857142rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .title-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .body-big {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.4285714285714286rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .body-small-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1.2142857142857142rem;
+        line-height: 1.399999976158142;
+        letter-spacing: 0rem;
+    }
+
+    .label-big {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-medium {
+        font-family: "Titillium Web";
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-big-bold {
+        font-family: "Titillium Web";
+        font-weight: Bold;
+        font-size: 1rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+
+    .label-small {
+        font-family: "Titillium Web";
+        font-weight: Regular;
+        font-size: 0.8571428571428571rem;
+        line-height: 1.2000000476837158;
+        letter-spacing: 0rem;
+    }
+}

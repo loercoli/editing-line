@@ -1,0 +1,11 @@
+body.archive {
+
+    background: var(--surface-background-grayscale-standard);
+
+    .archive-block {
+
+        .list-post-container {
+            gap: var(--gap-none);
+        }
+    }
+}

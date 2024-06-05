@@ -1,0 +1,13 @@
+.flicking-viewport {
+
+    .flicking-camera {
+        .panel {
+            figure {
+                img {
+                    height: 25rem; // Imposta l'altezza fissa
+                    width: auto; // Permette alla larghezza di adattarsi automaticamente
+                }
+            }
+        }
+    }
+}

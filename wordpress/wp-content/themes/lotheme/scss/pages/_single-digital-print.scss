@@ -1,0 +1,103 @@
+.cover-post {
+    .main-column {
+        gap: var(--gap-m);
+
+        .info-container {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+
+
+            .tag-category-post {
+                display: flex;
+                align-items: flex-start;
+                gap: var(--gap-s);
+            }
+
+            .button-container {
+                display: flex;
+                gap: var(--gap-s);
+                padding: var(--padding-m) 0;
+            }
+
+        }
+    }
+}
+
+.children-post {
+    background: var(--surface-contrast-container-grayscale-low);
+
+    .main-column {
+
+        .types-container {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--gap-m);
+            align-self: stretch;
+
+            .type-container {
+                display: flex;
+                padding: var(--padding-xs);
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: var(--margin-xs);
+                flex: 1 0 0;
+                align-self: stretch;
+
+                border-left: var(--border-stroke-m) solid var(--border-stroke-color-standard);
+
+                .type-title {
+                    padding: 0px;
+                }
+
+                .type-size {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.features-post {
+
+    background: var(--surface-background-primary-low);
+
+    &.post-printing {
+        background: var(--surface-background-tertiary-low);
+    }
+
+    .main-column {
+
+        .left-container,
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--gap-s);
+            align-self: stretch;
+
+            .title-section {
+                color: var(--text-on-grayscale-opacity-high);
+            }
+        }
+    }
+}
+
+
+.video-post {
+    background: var(--surface-primary-standard);
+
+    &.post-printing {
+        background: var(--surface-tertiary-standard);
+    }
+
+
+    .main-column {
+        color: var(--text-on-primary-standard);
+
+    }
+}

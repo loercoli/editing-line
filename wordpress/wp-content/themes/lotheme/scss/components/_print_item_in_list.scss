@@ -1,0 +1,64 @@
+.print-item-container {
+    display: flex;
+    align-items: stretch;
+    border: var(--border-stroke-l) solid var(--border-stroke_color-inverse);
+    position: relative;
+    /* Posiziona il container relativamente per l'overlay */
+    overflow: hidden;
+    /* Assicurati che l'overlay non fuoriesca dal container */
+
+    .info-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: var(--padding-l);
+        color: var(--text-on-grayscale-standard);
+
+        .tag-category-post {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--gap-s) !important;
+        }
+
+        .children-container {
+            .child-title {
+                padding: 0px;
+            }
+        }
+    }
+
+    .image-container {
+        flex: 0 0 25%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+    }
+
+    &:hover {
+        border-bottom: var(--border-stroke-l) solid var(--border-stroke_color-primary);
+        background: var(--surface-opacity-standard-high-dim);
+
+        &::after {
+            content: '';
+            /* Necessario per generare il box */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--surface-opacity-high-dim);
+            /* Blu opaco al 50% */
+            pointer-events: none;
+            /* Impedisce all'overlay di interferire con il clic o altri eventi */
+        }
+    }
+}

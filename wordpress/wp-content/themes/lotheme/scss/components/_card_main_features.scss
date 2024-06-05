@@ -1,0 +1,23 @@
+.card_main_features {
+    padding: var(--padding-s);
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: var(--border-radius-xs);
+    background: var(--surface-secondary-standard); // Default background
+    color: var(--text-on-secondary-standard); // Default color
+
+    .title {
+        @extend .title-big-bold; // Assicurati che la classe .title-big-bold sia definita altrove nel tuo CSS
+        padding: var(--padding-none);
+    }
+
+    .text {
+        padding: var(--padding-none);
+    }
+}
+
+// Stili specifici basati sul div genitore
+.post-printing .card_main_features {
+    background: var(--surface-tertiary-standard);
+    color: var(--text-on-tertiary-standard);
+}

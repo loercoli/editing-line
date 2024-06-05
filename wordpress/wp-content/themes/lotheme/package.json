@@ -1,0 +1,19 @@
+{
+  "name": "lotheme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass scss/style.scss style.css --watch --output-style",
+    "sass": "node-sass scss/style.scss style.css --output-style"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "@egjs/flicking": "^4.11.2"
+  }
+}

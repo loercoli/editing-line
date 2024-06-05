@@ -1,0 +1,28 @@
+/*
+Theme Name: LoemmeTheme
+Theme URI: http://example.com/your-theme-uri/
+Author: Lorenzo
+Author URI: http://example.com
+Description: A brief description of your theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: your-theme-slug
+Tags*/
+
+@import "base/index";
+
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+@import "components/chip";
+@import "components/card_main_features";
+@import "components/submenu-link";
+@import "components/gallery_carousel";
+@import "components/insert_img_modal";
+@import "components/taxonomy_selector";
+@import "components/header_archive_page";
+@import "components/print_item_in_list";
+
+@import "pages/single-digital-print";
+@import "pages/archive";

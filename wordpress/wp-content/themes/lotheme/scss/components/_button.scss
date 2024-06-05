@@ -1,0 +1,238 @@
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.button {
+    position: relative;
+    display: inline-flex;
+    padding: var(--padding-xs);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-none);
+    border-radius: var(--border-radius-s);
+
+    .label {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        min-height: var(--icon-size-xs);
+        padding: 0rem var(--padding-xs);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+
+        &.none-label {
+            display: none;
+        }
+    }
+
+    .icon {
+        position: relative;
+        z-index: 1;
+
+        &.big {
+            font-size: var(--icon-size-s) !important;
+            font-variation-settings: 'OPSZ' var(--icon-size-s);
+        }
+
+        &.medium {
+            font-size: var(--icon-size-s);
+            font-variation-settings: 'OPSZ' var(--icon-size-s);
+        }
+
+        &.small {
+            font-size: var(--icon-size-xs);
+            font-variation-settings: 'OPSZ' var(--icon-size-xs)
+        }
+
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--border-radius-s);
+        background-color: var(--surface-opacity-standard-dim);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
+    &:active {
+
+        transform: scale(0.99);
+
+        &::before {
+            background-color: var(--surface-opacity-high-dim);
+        }
+
+    }
+
+    // primary def
+
+    background: var(--surface-primary-standard);
+    color: var(--text-on-primary-standard);
+
+    &.secondary {
+        background: var(--surface-secondary-standard);
+        color: var(--text-on-secondary-standard);
+    }
+
+    &.tertiary {
+        background: var(--surface-tertiary-standard);
+        color: var(--text-on-tertiary-standard);
+    }
+
+    &.quartary {
+        background: var(--surface-quartary-standard);
+        color: var(--text-on-quartary-standard);
+    }
+
+    &.alert {
+        background: var(--surface-alert-standard);
+        color: var(--text-on-alert-standard);
+    }
+
+    &.bright {
+        background: var(--surface-contrast-container-grayscale-high);
+        color: var(--text-on-grayscale-inverse);
+    }
+
+    &.dim {
+        background: var(--surface-background-grayscale-inverse);
+        color: var(--text-on-grayscale-inverse);
+    }
+
+
+
+    &.outlined {
+
+        border-radius: var(--border-radius-s);
+        border: var(--border-stroke-m) solid;
+
+        border-color: var(--border-stroke_color-primary);
+        background: var(--surface-primary-container-low);
+        color: var(--text-on-primary-basic-variant);
+
+        &.secondary {
+            background: var(--surface-secondary-container-low);
+            color: var(--text-on-secondary-basic-variant);
+            border-color: var(--border-stroke_color-secondary);
+        }
+
+        &.tertiary {
+            background: var(--surface-tertiary-container-low);
+            color: var(--text-on-tertiary-basic-variant);
+            border-color: var(--border-stroke_color-tertiary);
+        }
+
+        &.quartary {
+            background: var(--surface-quartary-container-low);
+            color: var(--text-on-quartary-basic-variant);
+            border-color: var(--border-stroke_color-quartary);
+        }
+
+        &.alert {
+            background: var(--surface-alert-container-low);
+            color: var(--text-on-alert-basic-variant);
+            border-color: var(--border-stroke_color-alert);
+        }
+
+        &.bright {
+            background: var(--surface-contrast-container-grayscale-lowest);
+            color: var(--text-on-grayscale-standard);
+            border-color: var(--border-stroke_color-standard);
+        }
+
+        &.dim {
+            background: var(--surface-contrast-container-grayscale-highest);
+            color: var(--text-on-grayscale-inverse);
+            border-color: var(--border-stroke_color-inverse);
+        }
+
+    }
+
+    &.text-only {
+
+        background: none;
+        color: var(--text-on-primary-basic-variant);
+
+        &.secondary {
+            color: var(--text-on-secondary-basic-variant);
+        }
+
+        &.tertiary {
+            color: var(--text-on-tertiary-basic-variant);
+        }
+
+        &.quartary {
+            color: var(--text-on-quartary-basic-variant);
+        }
+
+        &.alert {
+            color: var(--text-on-alert-basic-variant);
+        }
+
+        &.bright {
+            color: var(--text-on-grayscale-standard);
+        }
+
+        &.dim {
+            color: var(--text-on-grayscale-inverse);
+        }
+
+    }
+
+    &.tonal {
+        background: var(--surface-primary-container);
+        color: var(--text-on-primary-container);
+
+        &.secondary {
+            background: var(--surface-secondary-container);
+            color: var(--text-on-secondary-container);
+        }
+
+        &.tertiary {
+            background: var(--surface-tertiary-container);
+            color: var(--text-on-tertiary-container);
+        }
+
+        &.quartary {
+            background: var(--surface-quartary-container);
+            color: var(--text-on-quartary-container);
+        }
+
+        &.alert {
+            background: var(--surface-alert-container);
+            color: var(--text-on-alert-container);
+        }
+
+        &.bright {
+            background: var(--surface-contrast-container-grayscale-lowest);
+            color: var(--text-on-grayscale-standard);
+        }
+
+        &.dim {
+            background: var(--surface-contrast-container-grayscale-highest);
+            color: var(--text-on-grayscale-invert);
+        }
+    }
+}
