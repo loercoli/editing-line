@@ -16,7 +16,6 @@
  * @link              editingline.com
  * @package           Editingline_Plugin
  * 
- * 
  */
 
 require_once 'inc/config.php';

@@ -4,81 +4,127 @@
 		$post_type_object = get_post_type_object( $post_type );
 		$post_type_object->template = array(
 			
-			//cover-group
+			// cover_group
 			array(
 				'core/group',
 				array(
-					'metadata' => array('name' => 'cover')
+					'className' => 'cover_group'
 				),
 				array(
 					array(
 						'core/heading',
 						array(
+							'className' => 'pre_printing_subtitle',
 							'placeholder' => 'Sottotitolo',
-							'level' => 2
+							'level' => 3
 						)
 					),
 					array(
 						'core/post-featured-image',
-						array()
+						array(
+							'className' => 'pre_printing_cover',
+						)
+					),
+					array( 
+						'core/paragraph',
+						array(
+						'className' => 'pre_printing_product_description',
+						'placeholder' => 'Descrizione del prodotto',
+						)
 					),
 				)
-				),
+			),
 			
-			//cover-info
+			// link_group
 			array(
 				'core/group',
 				array(
-					'metadata' => array(
-						'name' => 'info'
-					)
+					'className' => 'link_group'
 				),
 				array(
 					array(
-						'core/paragraph',
+						'core/paragraph', // Blocco paragrafo all'interno di 'core/details'
 						array(
-							'placeholder' => 'Descrizione del prodotto'
+							'className' => 'pre_printing_external_link',
+							'placeholder' => 'Link sito esterno'
 						)
 					),
 					array(
-						'core/image', 
-						array()
-					)
+						'core/file',
+						array(
+							'className' => 'pre_printing_pdf',
+							'placeholder' => 'Carica qui la brochure'
+						)
+					),
+				)
+			),
+			
+			// columns group
+			array(
+				'core/group',
+				array(
+					'className' => 'columns_group'
 				),
-			)
-			,
-			
-			//cover-link
-			array( 'core/group',array(
-				'metadata' => array(
-					'name' => 'link'
+				array(
+					array(
+						'core/columns',
+						array(),
+						array(
+							array(
+								'core/column',
+								array(
+									'width' => '33.33%',
+								),
+								array(
+									array(
+										'core/image',
+										array(
+											'alt' => '',
+										)
+									)
+								)
+							),
+							array(
+								'core/column',
+								array(
+									'width' => '66.66%',
+								),
+								array(
+									array(
+										'core/paragraph',
+										array()
+									)
+								)
+							)
+						)
+					)
 				)
-			),array(
-				array('core/paragraph', // Blocco paragrafo all'interno di 'core/details'
-					array('placeholder' => 'Link sito esterno'
-						)),
-				array( 'core/file',array(
-					'placeholder' => 'Carica qui la brochure'
-				) ),
-			) ),
+									),
 			
-			//cover-media
-			array( 'core/group',array(
-				'metadata' => array(
-					'name' => 'media'
+			// cover-media
+			array(
+				'core/group',
+				array(
+					'className' => 'media_group',
+				),
+				array(
+					array(
+						'core/gallery',
+						array(
+							'className' => 'pre_printing_gallery',
+							'linkTo' => 'none'
+						)
+					),
+					array(
+						'core/embed',
+						array(
+							'className' => 'pre_printing_video',
+							'providerNameSlug' => 'youtube',
+							'responsive' => true
+						)
+					),
 				)
-			),array(
-				array( 'core/gallery',array(
-					'linkTo' => 'none'
-				) ),
-				array( 'core/embed',array(
-					'providerNameSlug' => 'youtube',
-					'responsive' => true
-				) ),
-			) )
+			),
 		);
-
-		
 	});
-
 	
