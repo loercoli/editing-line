@@ -21,17 +21,17 @@ h1 {
 
 h2 {
     @extend .heading-big-bold;
-    padding: var(--padding-m) 0rem;
+    padding: var(--padding-s) 0rem;
 }
 
 h3 {
     @extend .title-small;
-    padding: var(--padding-m) 0rem;
+    padding: var(--padding-s) 0rem;
 }
 
 p {
     @extend .body-small;
-    padding: var(--padding-m) 0rem;
+    padding: var(--padding-s) 0rem;
 
 }
 
@@ -43,4 +43,8 @@ li {
 
 ul {
     padding: var(--padding-s) var(--padding-l);
+}
+
+.uppercase{
+    text-transform: uppercase;
 }

@@ -1,0 +1,19 @@
+.wp-block-columns {
+    &.columns_block {
+        &.is-layout-flex {
+            &.wp-block-columns-is-layout-flex {
+                gap: var(--gap-l);
+            }
+        }
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--main-column-max-width);
+    align-self: stretch;
+    gap: var(--gap-m);
+    margin: 0 auto; /* Centra orizzontalmente */
+}

@@ -15,7 +15,11 @@
         gap: var(--gap-m);
 
         div {
-            gap: var(--gap-m);
+            gap: var(--gap-l);
+            div{
+                gap: var(--gap-s);
+            
+            }
         }
     }
 }

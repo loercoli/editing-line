@@ -4,7 +4,7 @@
 button(array(
     'size' => 'small' | 'medium' | 'big' | 
     'style' => 'filled' | 'outlined' | 'tonal' | 'text-only' ;
-    'color' => 'primary' | 'secondary' | 'tertiary' | 'quartary';
+    'color' => 'primary' | 'secondary' | 'tertiary' | 'quaternary';
     'label' => 'label';
     'icon' => 'search';
 ));

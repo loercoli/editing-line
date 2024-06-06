@@ -103,7 +103,7 @@
                 <div class="title-post">
                     <h1 class="display"><?=$post_printing_title?></h1>
                 </div>
-                <div class="subtitle-post title-small"><?=$post_printing_subtitle?></div>
+                <div class="subtitle-post title-small uppercase"><?=$post_printing_subtitle?></div>
                 <div class="description-post body-small">
                     <?=$post_printing_product_description?>
                 </div>

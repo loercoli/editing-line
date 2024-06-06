@@ -106,7 +106,7 @@
                 <div class="title-post">
                     <h1 class="display"><?=$digital_print_title?></h1>
                 </div>
-                <div class="subtitle-post title-small"><?=$digital_print_subtitle?></div>
+                <div class="subtitle-post title-small uppercase"><?=$digital_print_subtitle?></div>
                 <div class="description-post body-small">
                     <?=$digital_print_product_description?>
                 </div>

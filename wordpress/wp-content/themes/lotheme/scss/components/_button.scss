@@ -101,9 +101,9 @@ button {
         color: var(--text-on-tertiary-standard);
     }
 
-    &.quartary {
-        background: var(--surface-quartary-standard);
-        color: var(--text-on-quartary-standard);
+    &.quaternary {
+        background: var(--surface-quaternary-standard);
+        color: var(--text-on-quaternary-standard);
     }
 
     &.alert {
@@ -144,10 +144,10 @@ button {
             border-color: var(--border-stroke_color-tertiary);
         }
 
-        &.quartary {
-            background: var(--surface-quartary-container-low);
-            color: var(--text-on-quartary-basic-variant);
-            border-color: var(--border-stroke_color-quartary);
+        &.quaternary {
+            background: var(--surface-quaternary-container-low);
+            color: var(--text-on-quaternary-basic-variant);
+            border-color: var(--border-stroke_color-quaternary);
         }
 
         &.alert {
@@ -183,8 +183,8 @@ button {
             color: var(--text-on-tertiary-basic-variant);
         }
 
-        &.quartary {
-            color: var(--text-on-quartary-basic-variant);
+        &.quaternary {
+            color: var(--text-on-quaternary-basic-variant);
         }
 
         &.alert {
@@ -215,9 +215,9 @@ button {
             color: var(--text-on-tertiary-container);
         }
 
-        &.quartary {
-            background: var(--surface-quartary-container);
-            color: var(--text-on-quartary-container);
+        &.quaternary {
+            background: var(--surface-quaternary-container);
+            color: var(--text-on-quaternary-container);
         }
 
         &.alert {

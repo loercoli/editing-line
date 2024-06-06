@@ -70,6 +70,10 @@
         background: var(--surface-background-tertiary-low);
     }
 
+    &.pre-printing {
+        background: var(--surface-background-quaternary-low);
+    }
+
     .main-column {
 
         .left-container,

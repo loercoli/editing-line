@@ -37,13 +37,7 @@
                 ];
             }
         }
-        wp_reset_postdata(); // Resetta il post data al contesto originale
-
-
-        $info_group = lom_get_group_contents(get_the_ID(), 'info_group');
-        $pre_printing_main_feature = $info_group['pre_printing_main_feature'][0];
-        $pre_printing_additional_features = $info_group['pre_printing_additional_features'][0];
-    
+        wp_reset_postdata(); // Resetta il post data al contesto originale     
         
         $link_group = lom_get_group_contents(get_the_ID(), 'link_group');
         $pre_printing_external_link = $link_group['pre_printing_external_link'][0];
@@ -55,9 +49,8 @@
         $pre_printing_pdf_href = $print_pdf[1];
         
         $columns_group = lom_get_group_contents(get_the_ID(), 'columns_group');
-        $pre_printing_columns_block = $columns_group["columns_block"][0];
-        echo $pre_printing_columns_block;
-        
+        $pre_printing_columns_blocks = $columns_group["columns_block"];
+
         $media_group = lom_get_group_contents(get_the_ID(), 'media_group');
         $pre_printing_gallery = $media_group['pre_printing_gallery'][0];
         $pre_printing_video  = $media_group['pre_printing_video'][0];
@@ -87,11 +80,14 @@
 <div class="block pre-printing cover-post">
     <div class="main-column">
         <div class="flex">
-            <div class="info-container col-6 ">
+        <div class="image-container col-4 ">
+                <?= $pre_printing_cover?>
+            </div>
+            <div class="info-container col-8 ">
                 <div class="tag-category-post">
                     <?php 
                     if ( !empty( $pre_printing_typology )){
-                        echo chip("filled", "tertiary",$pre_printing_typology, "none" , false); }
+                        echo chip("filled", "quaternary",$pre_printing_typology, "none" , false); }
                     if ( !empty( $pre_printing_brand )){
                         echo chip("filled", "bright" ,$pre_printing_brand, "none" , false); }
                     ?>
@@ -99,7 +95,7 @@
                 <div class="title-post">
                     <h1 class="display"><?=$pre_printing_title?></h1>
                 </div>
-                <div class="subtitle-post title-small"><?=$pre_printing_subtitle?></div>
+                <div class="subtitle-post title-small uppercase"><?=$pre_printing_subtitle?></div>
                 <div class="description-post body-small">
                     <?=$pre_printing_product_description?>
                 </div>
@@ -110,7 +106,7 @@
                     button(array(
                             'size' => 'medium', 
                             'style' => 'outlined', 
-                            'color' => 'tertiary',
+                            'color' => 'quaternary',
                             'label' => 'Link Pagina',
                         )) ?>
 
@@ -123,46 +119,16 @@
                     button(array(
                             'size' => 'medium', 
                             'style' => 'outlined', 
-                            'color' => 'tertiary',
+                            'color' => 'quaternary',
                             'label' => 'Scarica brochure'
                         )) ?>
                     </a>
                     <?php };?>
                 </div>
             </div>
-            <div class="image-container col-6 ">
-                <?= $pre_printing_cover?>
-            </div>
         </div>
     </div>
 </div>
-
-<?php if (!empty($children_data)) : ?>
-<div class="block pre-printing children-post">
-    <div class="main-column">
-        <h2>Modelli disponibili AAA</h2>
-        <div class="types-container col-12">
-            <?php foreach ($children_data as $child) : ?>
-            <?php if (!empty($child)) : ?>
-            <div class="type-container">
-                <h3 class="title-big-bold type-title"><?php echo esc_html($child['title']); ?></h3>
-                <?php if (!empty($child['width'])) : ?>
-                <label class="label-big-medium">Formato di stampa</label>
-                <p class="type-size body-small"><?= esc_html($child['width']); ?>
-                    <?php if (!empty($child['height'])) : ?>
-                    x
-                    <?= esc_html($child['height']); ?>
-                    <?php endif; ?>
-                    cm
-                </p>
-                <?php endif; ?>
-            </div>
-            <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
 
 
 
@@ -170,20 +136,14 @@
     <div class="main-column">
         <h2>Caratteristiche principali AAA</h2>
         <div class="main-features-container flex">
-            <div class="left-container col-6">
+            <div class="col-12">
                 <?php 
-                    foreach ($pre_printing_card_main_features as $card){
-                        if ( !empty( $card )){
-                        echo $card;
+                    foreach ($pre_printing_columns_blocks as $block){
+                        if ( !empty( $block )){
+                        echo $block;
                     };
                 }
                 ?>
-            </div>
-            <div class="right-container col-6">
-                <?php if (!empty($digital_print_main_feature)){ ?>
-                <div class="title-section label-big-medium">Altre caratteristiche:</div>
-                <?= $digital_print_main_feature?>
-                <?php } ?>
             </div>
         </div>
     </div>
