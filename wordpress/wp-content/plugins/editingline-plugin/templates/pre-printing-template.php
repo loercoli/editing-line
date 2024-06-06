@@ -93,7 +93,9 @@
 				array(
 					array(
 						'core/columns',
-						array(),
+						array(
+							'className' => 'columns_block'
+						),
 						array(
 							array(
 								'core/column',
@@ -126,7 +128,9 @@
 					// new columns block
 					array(
 						'core/columns',
-						array(),
+						array(
+							'className' => 'columns_block'
+						),
 						array(
 							array(
 								'core/column',

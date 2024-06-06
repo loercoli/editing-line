@@ -43,24 +43,20 @@
         $info_group = lom_get_group_contents(get_the_ID(), 'info_group');
         $pre_printing_main_feature = $info_group['pre_printing_main_feature'][0];
         $pre_printing_additional_features = $info_group['pre_printing_additional_features'][0];
-        
-
-        $main_features = lom_get_group_contents(get_the_ID(), 'features_group');
-        $pre_printing_card_main_features =  $main_features['card_main_features'];
     
-        
         
         $link_group = lom_get_group_contents(get_the_ID(), 'link_group');
         $pre_printing_external_link = $link_group['pre_printing_external_link'][0];
         preg_match('/href="([^"]+)"/', $pre_printing_external_link, $external_link);
         $pre_printing_external_link_href = $external_link[1];
 
-        
-
         $pre_printing_pdf = $link_group['pre_printing_pdf'][0];
         preg_match('/href="([^"]+)"/', $pre_printing_pdf, $print_pdf);
         $pre_printing_pdf_href = $print_pdf[1];
         
+        $columns_group = lom_get_group_contents(get_the_ID(), 'columns_group');
+        $pre_printing_columns_block = $columns_group["columns_block"][0];
+        echo $pre_printing_columns_block;
         
         $media_group = lom_get_group_contents(get_the_ID(), 'media_group');
         $pre_printing_gallery = $media_group['pre_printing_gallery'][0];
@@ -144,7 +140,7 @@
 <?php if (!empty($children_data)) : ?>
 <div class="block pre-printing children-post">
     <div class="main-column">
-        <h2>Modelli disponibili</h2>
+        <h2>Modelli disponibili AAA</h2>
         <div class="types-container col-12">
             <?php foreach ($children_data as $child) : ?>
             <?php if (!empty($child)) : ?>
@@ -172,7 +168,7 @@
 
 <div class="block pre-printing features-post">
     <div class="main-column">
-        <h2>Caratteristiche principali</h2>
+        <h2>Caratteristiche principali AAA</h2>
         <div class="main-features-container flex">
             <div class="left-container col-6">
                 <?php 
