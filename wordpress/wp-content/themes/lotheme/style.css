@@ -1353,8 +1353,19 @@ html {
   height: 100%;
 }
 
-.wp-block-columns.columns_block.is-layout-flex.wp-block-columns-is-layout-flex {
-  gap: var(--gap-l);
+.wp-block-columns {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--main-column-max-width);
+  align-self: stretch;
+  gap: var(--gap-m);
+  width: 100%;
+  margin: 0 auto; /* Centra orizzontalmente */
+}
+.wp-block-columns.is-layout-flex.wp-block-columns-is-layout-flex {
+  flex-direction: row;
+  gap: var(--gap-xl);
+  padding: var(--padding-xl) 0px;
 }
 
 main {
@@ -1882,7 +1893,7 @@ form.taxonomy_selector .select-container:hover {
   background: var(--surface-background-tertiary-low);
 }
 .features-post.pre-printing {
-  background: var(--surface-background-quaternary-low);
+  background: var(--surface-background-grayscale-low);
 }
 .features-post .main-column .left-container,
 .features-post .main-column .right-container {

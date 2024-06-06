@@ -1,13 +1,19 @@
 .wp-block-columns {
-    &.columns_block {
-        &.is-layout-flex {
-            &.wp-block-columns-is-layout-flex {
-                gap: var(--gap-l);
-            }
+    display: flex;
+    flex-direction: column;
+    max-width: var(--main-column-max-width);
+    align-self: stretch;
+    gap: var(--gap-m);
+    width: 100%;
+    margin: 0 auto; /* Centra orizzontalmente */
+    &.is-layout-flex {
+        &.wp-block-columns-is-layout-flex {
+                flex-direction: row;
+                gap: var(--gap-xl);
+                padding: var(--padding-xl) 0px;
         }
     }
 }
-
 
 main {
     display: flex;

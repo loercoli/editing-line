@@ -99,3 +99,4 @@ function filter_typology_cpt($action_url, $selected_typology, $taxonomy_name) {
 
 // Include componenti aggiuntivi se necessario
 require get_template_directory() . '/components/index.php';
+
