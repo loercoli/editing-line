@@ -92,6 +92,15 @@
 }
 
 
+.main-features-container {
+    &.pre-printing {
+        .wp-block-columns {
+            border-bottom: var(--border-stroke-s, 1px) solid var(--border-stroke_color-opacity-hightest, rgba(17, 17, 17, 0.35));
+        }
+    }
+}
+
+
 .video-post {
     background: var(--surface-primary-standard);
 

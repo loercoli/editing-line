@@ -98,7 +98,7 @@
                 <div class="tag-category-post">
                     <?php 
                     if ( !empty( $digital_print_typology )){
-                        echo chip("filled", "tertiary",$digital_print_typology, "none" , false); }
+                        echo chip("filled", "primary",$digital_print_typology, "none" , false); }
                     if ( !empty( $digital_print_brand )){
                         echo chip("filled", "bright" ,$digital_print_brand, "none" , false); }
                     ?>

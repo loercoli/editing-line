@@ -48,8 +48,8 @@
         preg_match('/href="([^"]+)"/', $pre_printing_pdf, $print_pdf);
         $pre_printing_pdf_href = $print_pdf[1];
         
-        $columns_group = lom_get_group_contents(get_the_ID(), 'columns_group');
-        $pre_printing_columns_blocks = $columns_group["columns_block"];
+        $columns_group = lom_get_all_inner_blocks(get_the_ID(), 'columns_group');
+        $pre_printing_columns_blocks = $columns_group;
 
         $media_group = lom_get_group_contents(get_the_ID(), 'media_group');
         $pre_printing_gallery = $media_group['pre_printing_gallery'][0];
@@ -134,8 +134,8 @@
 
 <div class="block pre-printing features-post">
     <div class="main-column">
-        <h2>Caratteristiche principali AAA</h2>
-        <div class="main-features-container flex">
+        <h2>Caratteristiche principali</h2>
+        <div class="main-features-container pre-printing flex">
             <div class="col-12">
                 <?php 
                     foreach ($pre_printing_columns_blocks as $block){
@@ -150,9 +150,9 @@
 </div>
 
 <?php if ( !empty($pre_printing_gallery)) : ?>
-<div class="block pre-printing gallery-post">
+<div class="block digital-print gallery-post">
     <div class="main-column">
-        <h2>Le applicazioni</h2>
+        <h2>Lasciati stupire</h2>
         <?= $pre_printing_gallery ?>
     </div>
 </div>

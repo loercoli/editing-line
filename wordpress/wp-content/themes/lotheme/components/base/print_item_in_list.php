@@ -1,6 +1,7 @@
 <?php
 
 function print_item_in_list($taxonomy_name) {
+
     $post_id = get_the_ID(); // Ottieni l'ID del post corrente nel Loop
     $post_data = get_post($post_id); // Ottieni l'oggetto post
 
@@ -23,6 +24,26 @@ function print_item_in_list($taxonomy_name) {
         'post_parent' => $post_id,
         'post_status' => 'publish',
     );
+
+    $typology_color = '';
+
+    switch ($taxonomy_name) {
+        case 'pre-printing-typology':
+            $typology_color = 'quaternary';
+            break;
+        case 'digital-print-typology':
+            $typology_color = 'primary';
+            break;
+        case 'post-printing-typology':
+            $typology_color = 'tertiary';
+            break;
+        default:
+            $typology_color = 'primary';
+            break;
+    }
+
+
+        
 
     $children = new WP_Query($args);
     if ($children->have_posts()) {
@@ -61,7 +82,7 @@ function print_item_in_list($taxonomy_name) {
     $print_item_in_list .= '<div class="info-container">';
     $print_item_in_list .= '<div class="tag-category-post">';
     if (!empty($digital_print_typology)) {
-        $print_item_in_list .= chip("filled", "tertiary", $digital_print_typology, "none", false);
+        $print_item_in_list .= chip("filled", $typology_color, $digital_print_typology, "none", false);
     }
     if (!empty($digital_print_brand)) {
         $print_item_in_list .= chip("filled", "bright", $digital_print_brand, "none", false);
