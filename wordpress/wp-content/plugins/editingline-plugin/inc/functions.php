@@ -116,3 +116,23 @@ function lom_get_group_contents($input, $groupClassName) {
 
     return $contents;
 }
+
+function lom_get_all_inner_blocks($input, $groupClassName) {
+    $groups = lom_get_blocks($input, 'core/group');
+    $allInnerBlocks = []; // Inizializza un array vuoto per tutti i blocchi interni
+
+    foreach ($groups as $group) {
+        // Controlla se il gruppo contiene la classe specificata
+        if (isset($group['attrs']['className']) && strpos($group['attrs']['className'], $groupClassName) !== false) {
+            foreach ($group['innerBlocks'] as $innerBlock) {
+                // Aggiungi il contenuto renderizzato all'array dei blocchi interni
+                $allInnerBlocks[] = lom_render_blocks([$innerBlock]);
+            }
+            // Rimuovi break se vuoi continuare a cercare in altri gruppi con la stessa className
+            break;
+        }
+    }
+
+    return $allInnerBlocks;
+}
+
