@@ -43,6 +43,6 @@ function ensure_brand_taxonomy_for_cpts() {
     register_taxonomy_for_object_type('brand', 'digital-print');
     register_taxonomy_for_object_type('brand', 'pre-printing');
     register_taxonomy_for_object_type('brand', 'post-printing');
-    register_taxonomy_for_object_type('brand', 'consumables');
+    register_taxonomy_for_object_type('brand', 'consumable');
     // Add any additional CPTs as needed
 }

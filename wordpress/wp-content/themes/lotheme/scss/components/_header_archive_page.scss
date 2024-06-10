@@ -11,6 +11,12 @@
         background: var(--surface-background-quaternary-low);
     }
 
+    &.materiali-di-consumo {
+        // Questo si applica quando l'elemento ha sia la classe .header-archive che .post-stampa
+        background: var(--surface-background-secondary-low);
+    }
+
+
     .main-column {
         // Questo si applica ai discendenti .main-column di .header-archive
         gap: var(--gap-m);

@@ -1,5 +1,24 @@
 console.log("miao")
 
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.overlay');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    menuItems.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            overlay.classList.add('active');
+        });
+        item.addEventListener('mouseout', () => {
+            overlay.classList.remove('active');
+        });
+    });
+
+    overlay.addEventListener('mouseover', () => {
+        overlay.classList.remove('active');
+    });
+});
+
+
 const flicking = new Flicking("#carousel", {
     circular: true,
 });
@@ -24,3 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     }
 });
+
+
+

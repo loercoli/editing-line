@@ -37,6 +37,9 @@ function print_item_in_list($taxonomy_name) {
         case 'post-printing-typology':
             $typology_color = 'tertiary';
             break;
+        case 'consumable-typology':
+            $typology_color = 'secondary';
+            break;
         default:
             $typology_color = 'primary';
             break;
@@ -78,7 +81,7 @@ function print_item_in_list($taxonomy_name) {
     }
 
     // Costruisci l'HTML
-    $print_item_in_list = '<a class="print-item-container" href="' . esc_url($post_link) . '">';
+    $print_item_in_list = '<a class="print-item-container ' . $taxonomy_name . '" href="' . esc_url($post_link) . '">';
     $print_item_in_list .= '<div class="info-container">';
     $print_item_in_list .= '<div class="tag-category-post">';
     if (!empty($digital_print_typology)) {

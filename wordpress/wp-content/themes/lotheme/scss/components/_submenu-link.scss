@@ -1,30 +1,26 @@
 .submenu-item {
-
     color: var(--text-on-grayscale-inverse);
     background: var(--surface-contrast-container-primary-inverse);
     display: flex;
     padding: var(--padding-none, 0rem) 0rem;
-
     flex-direction: column;
     align-items: center;
     align-self: stretch;
+    position: relative;
+    z-index: 2;
 
-    /* Assicura che il sottomenu sia sopra gli altri contenuti */
     .main-column {
         display: flex;
         max-width: var(--main-column-max-width);
         padding: var(--padding-m);
-
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         align-self: stretch;
-
         border-bottom: var(--border-stroke-m, 2px) solid var(--border-stroke_color-opacity-low);
     }
 
     &:hover {
         background: var(--surface-contrast-container-primary-highest);
     }
-
 }

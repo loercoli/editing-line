@@ -66,3 +66,22 @@
     }
 
 }
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Colore e opacità dello scurimento */
+    z-index: 1;
+    opacity: 0; /* Inizialmente trasparente */
+    transition: opacity 0.5s ease; /* Aggiunge una transizione di 0.5s all'opacità */
+    pointer-events: none; /* Disabilita gli eventi del mouse quando nascosto */
+}
+
+.overlay.active {
+    opacity: 1; /* Opacità al 100% quando attivo */
+    pointer-events: auto; /* Abilita gli eventi del mouse quando visibile */
+}

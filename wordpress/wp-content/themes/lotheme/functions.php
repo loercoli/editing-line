@@ -100,3 +100,12 @@ function filter_typology_cpt($action_url, $selected_typology, $taxonomy_name) {
 // Include componenti aggiuntivi se necessario
 require get_template_directory() . '/components/index.php';
 
+
+function get_first_non_empty($array, $keys) {
+    foreach ($keys as $key) {
+        if (!empty($array[$key][0])) {
+            return $array[$key][0];
+        }
+    }
+    return null; // Restituisce null se nessuna delle chiavi ha un valore non vuoto
+}

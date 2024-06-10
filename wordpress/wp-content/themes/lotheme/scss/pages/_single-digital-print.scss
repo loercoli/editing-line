@@ -103,14 +103,26 @@
 
 .video-post {
     background: var(--surface-primary-standard);
-
-    &.post-printing {
-        background: var(--surface-tertiary-standard);
-    }
-
-
     .main-column {
         color: var(--text-on-primary-standard);
 
     }
+
+    &.post-printing {
+        background: var(--surface-tertiary-standard);
+        .main-column {
+            color: var(--text-on-tertiary-standard);
+    
+        }
+    }
+    
+    &.pre-printing {
+        background: var(--surface-quaternary-standard);
+        .main-column {
+            color: var(--text-on-quaternary-standard);
+    
+        }
+    }
+    
+
 }

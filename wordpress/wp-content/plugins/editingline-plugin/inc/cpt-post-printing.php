@@ -91,6 +91,3 @@ function register_post_printing_cpt_and_taxonomies() {
 }
 
 add_action('init', 'register_post_printing_cpt_and_taxonomies');
-
-// The function to ensure 'brand' taxonomy is correctly associated with all relevant CPTs is already provided.
-// No need to modify it for Post-Printing as it applies globally to all specified CPTs.

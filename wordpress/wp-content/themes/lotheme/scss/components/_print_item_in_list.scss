@@ -1,12 +1,22 @@
 .print-item-container {
     display: flex;
     align-items: stretch;
-    border: var(--border-stroke-l) solid var(--border-stroke_color-inverse);
     position: relative;
-    /* Posiziona il container relativamente per l'overlay */
     overflow: hidden;
-    /* Assicurati che l'overlay non fuoriesca dal container */
-
+    padding: var(--padding-s) 0;
+    
+    border-bottom: var(--border-stroke-m) solid;
+    border-color: var(--border-stroke-color-primary);
+    &.pre-printing-typology{
+        border-color: var(--border-stroke-color-quaternary);
+    }
+    &.post-printing-typology{
+       border-color:  var(--border-stroke-color-tertiary);
+    }
+    &.consumable-printing-typology{
+        border-color: var(--border-stroke-color-seconday);
+    }
+    
     .info-container {
         flex: 1;
         display: flex;
@@ -44,7 +54,7 @@
     }
 
     &:hover {
-        border-bottom: var(--border-stroke-l) solid var(--border-stroke_color-primary);
+        border-color: var(--border-stroke-color-inverse);
         background: var(--surface-opacity-standard-high-dim);
 
         &::after {

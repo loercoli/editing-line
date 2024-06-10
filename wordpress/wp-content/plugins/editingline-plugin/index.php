@@ -25,13 +25,13 @@ require_once 'inc/functions.php';
 require_once 'inc/cpt-pre-printing.php';
 require_once 'inc/cpt-digital-print.php';
 require_once 'inc/cpt-post-printing.php';
-require_once 'inc/cpt-consumables.php';
+require_once 'inc/cpt-consumable.php';
 
 
 require_once 'templates/pre-printing-template.php';
 require_once 'templates/digital-print-template.php';
 require_once 'templates/post-printing-template.php';
-require_once 'templates/consumables-template.php';
+require_once 'templates/consumable-template.php';
 
 
 function my_plugin_admin_styles() {

@@ -1,5 +1,5 @@
 <?php
-function register_consumables_cpt_and_taxonomies() {
+function register_consumable_cpt_and_taxonomies() {
     // Register Custom Post Type Consumables
     $labels = array(
         'name'                  => _x('Consumables', 'Post Type General Name', 'text_domain'),
@@ -50,7 +50,7 @@ function register_consumables_cpt_and_taxonomies() {
         'capability_type'       => 'post',
         'show_in_rest'          => true,
     );
-    register_post_type('consumables', $args);
+    register_post_type('consumable', $args);
 
     // Register Custom Taxonomy for Consumables Typology
     $labels = array(
@@ -86,11 +86,12 @@ function register_consumables_cpt_and_taxonomies() {
         'show_in_rest'               => true,
 
     );
-    register_taxonomy('consumables-typology', array('consumables'), $args);
+    register_taxonomy('consumable-typology', array('consumable'), $args);
 }
 
-add_action('init', 'register_consumables_cpt_and_taxonomies');
+add_action('init', 'register_consumable_cpt_and_taxonomies');
+add_action('init', 'add_brand_taxonomy_to_cpts');
 
 
 
-// The function to ensure 'brand' taxonomy is correctly associated with all relevant CPTs applies here as well.
+// The function to ensure 'brand' taxonomy is correctly associated with al relevant CPTs applies here as well.

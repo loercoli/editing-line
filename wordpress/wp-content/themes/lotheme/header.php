@@ -62,6 +62,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    
     <div id="page" class="site">
         <header id="masthead" class="site-header">
             <nav id="site-navigation" class="main-navigation editing-menu">
@@ -93,4 +94,5 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
                 </div>
             </nav>
         </header>
+        <div class="overlay"></div> <!-- Aggiungi questo elemento -->
         <div class="site-content-container">

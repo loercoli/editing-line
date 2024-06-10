@@ -52,8 +52,14 @@
         $pre_printing_columns_blocks = $columns_group;
 
         $media_group = lom_get_group_contents(get_the_ID(), 'media_group');
-        $pre_printing_gallery = $media_group['pre_printing_gallery'][0];
-        $pre_printing_video  = $media_group['pre_printing_video'][0];
+        $pre_printing_gallery = !empty($media_group['pre_printing_gallery'][0]) ? $media_group['pre_printing_gallery'][0] : null;
+        $video_keys = [
+            'pre_printing_video',
+            'wp-embed-aspect-16-9 wp-has-aspect-ratio',
+            'pre_printing_video wp-embed-aspect-16-9 wp-has-aspect-ratio'
+        ];
+        $pre_printing_video = get_first_non_empty($media_group, $video_keys);
+
 
         $brands = get_the_terms( $post_id, 'brand' );
         if ( !empty( $brands ) && !is_wp_error( $brands ) ) {

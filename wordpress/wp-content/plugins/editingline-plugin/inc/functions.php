@@ -1,7 +1,7 @@
 <?php
 
 function dp_add_custom_metabox() {
-    $post_types = ['digital-print', 'post-printing', 'pre-printing', 'consumables']; // Array dei post types
+    $post_types = ['digital-print', 'post-printing', 'pre-printing', 'consumable']; // Array dei post types
     foreach ($post_types as $post_type) {
         add_meta_box(
             'dp_dimensions',          // ID of the metabox
