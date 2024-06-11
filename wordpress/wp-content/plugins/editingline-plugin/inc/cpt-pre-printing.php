@@ -54,7 +54,7 @@ function register_pre_printing_cpt() {
 
     // Register Custom Taxonomy for Pre-Press Typology
     $labels = array(
-        'name'                       => _x('Pre-typologies', 'Taxonomy General Name', 'text_domain'),
+        'name'                       => _x('Pre-printing-typologies', 'Taxonomy General Name', 'text_domain'),
         'singular_name'              => _x('Typology', 'Taxonomy Singular Name', 'text_domain'),
         'menu_name'                  => __('Typology', 'text_domain'),
         'all_items'                  => __('All Typologies', 'text_domain'),

@@ -23,6 +23,7 @@
         flex-direction: column;
         padding: var(--padding-l);
         color: var(--text-on-grayscale-standard);
+        gap: var(--gap-s) !important;
 
         .tag-category-post {
             display: flex;

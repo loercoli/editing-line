@@ -39,6 +39,7 @@
             gap: var(--gap-s);
 
             .menu-item {
+                position: relative; /* Aggiungi questa riga per posizionare il triangolo in modo assoluto rispetto al menu-item */
 
                 .submenu {
                     display: none;
@@ -50,10 +51,26 @@
                     padding-top: 1rem;
                 }
 
+                .triangle {
+                    position: absolute;
+                    bottom: -14px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 30px solid transparent;
+                    border-right: 30px solid transparent;
+                    border-bottom: 13px solid var(--surface-contrast-container-primary-inverse);
+                    display: none;
+                }
             }
 
             .menu-item:hover .submenu {
                 display: block;
+            }
+
+            .menu-item:hover .triangle {
+                display: block; /* Mostra il triangolo al passaggio del mouse */
             }
 
             .menu-item:hover {
@@ -62,11 +79,8 @@
                 }
             }
         }
-
     }
-
 }
-
 
 .overlay {
     position: fixed;

@@ -56,7 +56,7 @@ function register_digital_print_cpt() {
 function register_digital_print_typology_taxonomy() {
     // Register Custom Taxonomy for Digital Print Typology
     $labels = array(
-        'name'                       => _x('Digital-typologies', 'Taxonomy General Name', 'text_domain'),
+        'name'                       => _x('Digital-print-typologies', 'Taxonomy General Name', 'text_domain'),
         'singular_name'              => _x('Typology', 'Taxonomy Singular Name', 'text_domain'),
         'menu_name'                  => __('Typology', 'text_domain'),
         'all_items'                  => __('All Typologies', 'text_domain'),

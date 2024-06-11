@@ -55,7 +55,7 @@ function register_post_printing_cpt_and_taxonomies() {
 
     // Register Custom Taxonomy for Post-Printing Typology
     $labels = array(
-        'name'                       => _x('Typologies', 'Taxonomy General Name', 'text_domain'),
+        'name'                       => _x('Post-printing-typologies', 'Taxonomy General Name', 'text_domain'),
         'singular_name'              => _x('Typology', 'Taxonomy Singular Name', 'text_domain'),
         'menu_name'                  => __('Typology', 'text_domain'),
         'all_items'                  => __('All Typologies', 'text_domain'),

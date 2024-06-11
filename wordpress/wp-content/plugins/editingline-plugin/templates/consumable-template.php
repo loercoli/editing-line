@@ -33,7 +33,103 @@
 						)
 					),
 				)
+			),
+			
+			// link_group
+			array(
+				'core/group',
+				array(
+					'className' => 'link_group'
+				),
+				array(
+					array(
+						'core/file',
+						array(
+							'className' => 'consumable_pdf',
+							'placeholder' => 'Carica qui la brochure'
+						)
+					),
+				)
+			),
+			
+			// columns group
+			array(
+				'core/group',
+				array(
+					'className' => 'columns_group'
+				),
+				array(
+					array(
+						'core/columns',
+						array(
+							'className' => 'columns_block'
+						),
+						array(
+							array(
+								'core/column',
+								array(
+									'width' => '33.33%',
+								),
+								array(
+									array(
+										'core/image',
+										array(
+											'alt' => '',
+										)
+									)
+								)
+							),
+							array(
+								'core/column',
+								array(
+									'width' => '66.66%',
+								),
+								array(
+									array(
+										'core/paragraph',
+										array()
+									)
+								)
+							)
+						)
+					),
+					// new columns block
+					array(
+						'core/columns',
+						array(
+							'className' => 'columns_block'
+						),
+						array(
+							array(
+								'core/column',
+								array(
+									'width' => '66.66%',
+								),
+								array(
+									array(
+										'core/paragraph',
+										array()
+									)
+								)
+							),
+							array(
+								'core/column',
+								array(
+									'width' => '33.33%',
+								),
+								array(
+									array(
+										'core/image',
+										array(
+											'alt' => '',
+										)
+									)
+								)
+							)
+						)
+					)
+				)
 			)
 		);
 	});
-?>
+	

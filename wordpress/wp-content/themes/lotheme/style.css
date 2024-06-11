@@ -755,7 +755,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-big, form.taxonomy_selector .select-container select {
+  .title-big, form.taxonomy_selector .select-container select, h3 {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.7142857143rem;
@@ -769,7 +769,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-small, h3 {
+  .title-small {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.4285714286rem;
@@ -973,7 +973,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-big, form.taxonomy_selector .select-container select {
+  .title-big, form.taxonomy_selector .select-container select, h3 {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.7142857143rem;
@@ -987,7 +987,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-small, h3 {
+  .title-small {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.4285714286rem;
@@ -1168,7 +1168,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-big, form.taxonomy_selector .select-container select {
+  .title-big, form.taxonomy_selector .select-container select, h3 {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.7142857143rem;
@@ -1182,7 +1182,7 @@ body.noscroll {
     line-height: 1.2000000477;
     letter-spacing: 0rem;
   }
-  .title-small, h3 {
+  .title-small {
     font-family: "Titillium Web";
     font-weight: 600;
     font-size: 1.4285714286rem;
@@ -1432,6 +1432,9 @@ main {
   align-items: flex-start;
   gap: var(--gap-s);
 }
+.site-header .editing-menu .container-navigation-buttons .menu-item {
+  position: relative; /* Aggiungi questa riga per posizionare il triangolo in modo assoluto rispetto al menu-item */
+}
 .site-header .editing-menu .container-navigation-buttons .menu-item .submenu {
   display: none;
   position: fixed;
@@ -1441,8 +1444,23 @@ main {
   z-index: 1;
   padding-top: 1rem;
 }
+.site-header .editing-menu .container-navigation-buttons .menu-item .triangle {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 13px solid var(--surface-contrast-container-primary-inverse);
+  display: none;
+}
 .site-header .editing-menu .container-navigation-buttons .menu-item:hover .submenu {
   display: block;
+}
+.site-header .editing-menu .container-navigation-buttons .menu-item:hover .triangle {
+  display: block; /* Mostra il triangolo al passaggio del mouse */
 }
 .site-header .editing-menu .container-navigation-buttons .menu-item:hover button::before {
   opacity: 1;
@@ -1852,6 +1870,7 @@ form.taxonomy_selector .select-container:hover {
   flex-direction: column;
   padding: var(--padding-l);
   color: var(--text-on-grayscale-standard);
+  gap: var(--gap-s) !important;
 }
 .print-item-container .info-container .tag-category-post {
   display: flex;
@@ -1893,6 +1912,9 @@ form.taxonomy_selector .select-container:hover {
   /* Impedisce all'overlay di interferire con il clic o altri eventi */
 }
 
+.cover-post.consumable {
+  background: var(--surface-background-grayscale-low);
+}
 .cover-post .main-column {
   gap: var(--gap-m);
 }
@@ -1948,6 +1970,9 @@ form.taxonomy_selector .select-container:hover {
 }
 .features-post.pre-printing {
   background: var(--surface-background-grayscale-low);
+}
+.features-post.consumable {
+  background: var(--surface-background-grayscale-standard);
 }
 .features-post .main-column .left-container,
 .features-post .main-column .right-container {

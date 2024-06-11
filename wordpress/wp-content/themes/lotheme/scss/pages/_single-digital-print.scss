@@ -1,4 +1,8 @@
 .cover-post {
+
+    &.consumable{
+        background: var(--surface-background-grayscale-low);
+    }
     .main-column {
         gap: var(--gap-m);
 
@@ -73,6 +77,12 @@
     &.pre-printing {
         background: var(--surface-background-grayscale-low);
     }
+    
+    &.consumable {
+        background: var(--surface-background-grayscale-standard);
+    }
+
+
 
     .main-column {
 

@@ -54,7 +54,7 @@ function register_consumable_cpt_and_taxonomies() {
 
     // Register Custom Taxonomy for Consumables Typology
     $labels = array(
-        'name'                       => _x('Consumables-typologies', 'Taxonomy General Name', 'text_domain'),
+        'name'                       => _x('Consumable-typologies', 'Taxonomy General Name', 'text_domain'),
         'singular_name'              => _x('Typology', 'Taxonomy Singular Name', 'text_domain'),
         'menu_name'                  => __('Typology', 'text_domain'),
         'all_items'                  => __('All Typologies', 'text_domain'),
